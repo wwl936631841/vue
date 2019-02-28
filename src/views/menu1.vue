@@ -1,11 +1,15 @@
 <template>
   <div class="buju">
     <div class="left">
-      <router-link to="/one/login">登录</router-link>
+      <router-link :to="{name:'login',params:{userid:123}}">登录</router-link>
+      <!-- 编程式导航传参 -->
+      <span @click="to(userid)" style="margin:0 5px;">编程式</span>
       <router-link to="/one/regisiter">注册</router-link>
     </div>
     <div class="right">
-      <div class="top">头部</div>
+      <div class="top">头部
+        <nv-input v-model="currentValue" :disabled='false'></nv-input>
+      </div>
       <div class="center">
         <router-view></router-view>
       </div>
@@ -13,7 +17,22 @@
   </div>
 </template>
 <script>
-export default {};
+// import NvInput from '../../package/input/input.vue'
+export default {
+  // components:{NvInput},
+  data(){
+    return{
+      currentValue:"wang",
+      userid:23
+    }
+  },
+  methods:{
+    //  编程式导航传参 
+    to(id){
+      this.$router.push(`/one/login/${id}`)
+    }
+  }
+};
 </script>
 <style scoped lang="scss">
 .buju {

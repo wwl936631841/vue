@@ -9,31 +9,30 @@ import regisiter from './views/regisiter.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/one',
-      name: 'one',
-      component: one,
-      children: [
-        {
-          path: 'login',
-          component: login
+    routes: [{
+            path: '/',
+            name: 'home',
+            component: Home
         },
         {
-          path: 'regisiter',
-          component: regisiter
-        }
-      ]
-    },
-    {
-      path: '/two',
-      name: 'two',
-      component: two
-    },
-  ]
+            path: '/one',
+            name: 'one',
+            component: one,
+            children: [{
+                    path: 'login/:userid',
+                    component: login,
+                    name: 'login'
+                },
+                {
+                    path: 'regisiter',
+                    component: regisiter
+                }
+            ]
+        },
+        {
+            path: '/two',
+            name: 'two',
+            component: two
+        },
+    ]
 })
