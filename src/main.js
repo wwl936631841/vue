@@ -4,10 +4,11 @@ import router from './router'
 import store from './store'
 import echarts from 'echarts'
 import ElementUI from 'element-ui'
+import index from '../package/index'
 
 // 注册全局组件
-import NvInput from '../package/input'
-Vue.component('nv-input', NvInput)
+// import NvInput from '../package/input'
+// Vue.component('nv-input', NvInput)
 
 Vue.use(ElementUI)
 

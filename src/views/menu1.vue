@@ -22,7 +22,7 @@ export default {
   // components:{NvInput},
   data(){
     return{
-      currentValue:"wang",
+      currentValue:"",
       userid:23
     }
   },
