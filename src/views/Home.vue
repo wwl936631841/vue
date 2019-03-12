@@ -256,6 +256,7 @@
 </style>
 
 <script>
+import { getPipeDefectData } from "./api";
 export default {
   mounted() {
     this.draw();
@@ -505,6 +506,11 @@ export default {
           }
         ]
       });
+      getPipeDefectData().then(({data}) => {
+                console.log(data)
+            }).catch(err => {
+               console.log(err);
+            });
     }
   }
 };
