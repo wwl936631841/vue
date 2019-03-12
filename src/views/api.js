@@ -1,6 +1,6 @@
-export function getPipeDefectData(params) {
+export function getPipeDefectData(url, params) {
     return unfetch({
-        url: '/news/index',
+        url: '/users',
         params: params
     });
 }
