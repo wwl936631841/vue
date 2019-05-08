@@ -8,6 +8,11 @@ import index from '../package/index'
 
 import unfetch from './unfetch'
 
+// 测试scrollview
+import ScrollView from 'vue-scrollview'
+// import { $scrollview } from 'vue-scrollview'
+Vue.use(ScrollView)
+Vue.component(ScrollView)
 // 引入mock.js
 require('./assets/mock');
 
