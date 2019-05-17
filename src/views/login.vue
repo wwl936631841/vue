@@ -2,7 +2,7 @@
   <div>
     login1
     <!-- <we-input></we-input>  -->
-    <WeInput :userName="userName" @getUserName='getUserName'></WeInput>
+    <WeInput v-foucs :userName="userName" @getUserName='getUserName'></WeInput>
   </div>
 </template>
 

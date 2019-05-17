@@ -1,14 +1,14 @@
 <template>
   <div class="buju">
     <div class="left">
-      <router-link :to="{name:'login',params:{userid:123}}">登录</router-link>
+      <router-link  v-demo :to="{name:'login',params:{userid:123}}">登录</router-link>
       <!-- 编程式导航传参 -->
-      <span @click="to(userid)" style="margin:0 5px;">编程式</span>
-      <router-link to="/one/regisiter">注册</router-link>
+      <span @click="to(userid)" v-demo style="margin:0 5px;">编程式</span>
+      <router-link v-demo to="/one/regisiter">注册</router-link>
     </div>
     <div class="right">
       <div class="top">头部
-        <nv-input v-model="currentValue" :disabled='false'></nv-input>
+        <nv-input @focus="focus" v-model="currentValue" :disabled='false'></nv-input>
       </div>
       <div class="center">
         <router-view></router-view>
@@ -30,6 +30,9 @@ export default {
     //  编程式导航传参 
     to(id){
       this.$router.push(`/one/login/${id}`)
+    },
+    focus(){
+      console.log(123)
     }
   }
 };

@@ -16,6 +16,9 @@
   text-align: center;
   color: #2c3e50;
 }
+.actives{
+  color:#f10215
+}
 #nav {
   padding: 30px;
   a {

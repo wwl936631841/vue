@@ -6,6 +6,9 @@ import echarts from 'echarts'
 import ElementUI from 'element-ui'
 import index from '../package/index'
 
+// 自定义指令
+import directive from '../src/directive/foucs'
+
 import unfetch from './unfetch'
 
 // 测试scrollview

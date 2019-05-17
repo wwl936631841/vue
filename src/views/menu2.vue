@@ -1,7 +1,8 @@
 <template>
   <div>
     menu2
-    <NvInput v-model="name" @input="handleInput"></NvInput>
+    <nv-input v-foucs v-model="name" @input="handleInput"></nv-input>
+    <div class="top" @click="login">登陆</div>
     <scroll-view>
       <template slot-scope="visible">
       <div>1234
@@ -107,8 +108,10 @@
 </template>
 <script>
 import NvInput from '../components/input2/input.vue'
+import mixin from '../mixins/mixin.js'
 export default {
   components:{NvInput},
+  mixins:[mixin],
   data(){
     return{
       name:''
@@ -121,3 +124,8 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+    .top{
+      margin: 10px;
+    }
+</style>
